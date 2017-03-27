@@ -17,11 +17,11 @@ public class Conexao {
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1:3333/videolocadora";
+            String url = "jdbc:mysql://127.0.0.1:3333/syspet";
             con = DriverManager.getConnection(url,"root", "admin");
                    
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro na Conexão com o Banco","Funcionario", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog(null, "Erro na Conexão com o Banco","syspet", JOptionPane.ERROR_MESSAGE );
         }
         return con;
     }

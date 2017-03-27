@@ -205,7 +205,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tunga" size="14" style="3"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="USERNAME"/>
+            <Property name="text" type="java.lang.String" value="USERNAME:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -213,7 +213,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tunga" size="14" style="3"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="SENHA"/>
+            <Property name="text" type="java.lang.String" value="SENHA:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">

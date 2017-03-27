@@ -80,10 +80,10 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tunga", 3, 14)); // NOI18N
-        jLabel3.setText("USERNAME");
+        jLabel3.setText("USERNAME:");
 
         jLabel4.setFont(new java.awt.Font("Tunga", 3, 14)); // NOI18N
-        jLabel4.setText("SENHA");
+        jLabel4.setText("SENHA:");
 
         jButton3.setText("ESQUECI MINHA SENHA");
 
