@@ -6,6 +6,8 @@
 package controle;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import modelo.Cliente;
 
 /**
  *
@@ -18,19 +20,21 @@ public class secretariaDAO extends ExecuteSQL{
     }
     
     
-    public String Inserir_Funcionario(Cliente f){
-        String sql = "INSERT INTO funcionario VALUES (0,?,?,?)";
+    public String Inserir_Cliente(Cliente f){
+        String sql = "INSERT INTO cliente VALUES (0,?,?,?,?,?)";
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
             
             ps.setString(1, f.getNome());
-            ps.setString(2, f.getLogin());
-            ps.setString(3, f.getSenha());
+            ps.setString(2, f.getEmail());
+            ps.setString(3, f.getCPF());
+            ps.setString(4, f.getTelefone());
+            ps.setString(5, f.getEndereco());
             
             if(ps.executeUpdate() > 0){
-                return "Funcionario Cadastrado com Sucesso!";
+                return "Cliente Cadastrado com Sucesso!";
             }else{
-                return "Erro ao Cadastrar Funcionario!";
+                return "Erro ao Cadastrar Cliente!";
             }
         } catch (Exception e) {
             return e.getMessage();
