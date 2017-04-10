@@ -5,10 +5,16 @@
  */
 package controle;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Bad Block
  */
-public class admDAO {
+public class admDAO extends ExecuteSQL{
+
+    public admDAO(Connection con) {
+        super(con);
+    }
     
 }

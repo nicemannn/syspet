@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controle;
-
-import java.sql.Connection;
+package modelo;
 
 /**
  *
  * @author Bad Block
  */
-public class clienteDAO extends ExecuteSQL {
-
-    public clienteDAO(Connection con) {
-        super(con);
-    }
+public class User {
     
 }
