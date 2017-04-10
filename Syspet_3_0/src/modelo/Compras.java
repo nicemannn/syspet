@@ -10,10 +10,58 @@ package modelo;
  * @author Bebe Iucas
  */
 public class Compras {
-  String CPFCliente;
-  double descontos;
-  double total;
-  String formaDePagamento;
-  Servicos listaDeServicos = new Servicos();
-  int CodAnimal; 
+  private String CPFCliente;
+  private double descontos;
+  private double total;
+  private String formaDePagamento;
+  private Servicos listaDeServicos = new Servicos();
+  private int CodAnimal; 
+
+    public String getCPFCliente() {
+        return CPFCliente;
+    }
+
+    public void setCPFCliente(String CPFCliente) {
+        this.CPFCliente = CPFCliente;
+    }
+
+    public double getDescontos() {
+        return descontos;
+    }
+
+    public void setDescontos(double descontos) {
+        this.descontos = descontos;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public String getFormaDePagamento() {
+        return formaDePagamento;
+    }
+
+    public void setFormaDePagamento(String formaDePagamento) {
+        this.formaDePagamento = formaDePagamento;
+    }
+
+    public Servicos getListaDeServicos() {
+        return listaDeServicos;
+    }
+
+    public void setListaDeServicos(Servicos listaDeServicos) {
+        this.listaDeServicos = listaDeServicos;
+    }
+
+    public int getCodAnimal() {
+        return CodAnimal;
+    }
+
+    public void setCodAnimal(int CodAnimal) {
+        this.CodAnimal = CodAnimal;
+    }
 }
