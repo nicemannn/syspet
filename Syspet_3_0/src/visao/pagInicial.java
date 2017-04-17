@@ -256,10 +256,10 @@ public class pagInicial extends javax.swing.JFrame {
             secretariaDAO sql = new secretariaDAO(con);
             Cliente f = new Cliente();
             
-            f.setNome(nome);
-            f.setEmail(email);
-            f.setCPF(cpf);
-            f.setTelefone(celular);
+            f.setNome(nomecliente);
+            f.setEmail(emailcliente);
+            f.setCPF(cpfcliente);
+            f.setTelefone(celularcliente);
 
             
             sql.Inserir_Cliente(f);
