@@ -260,6 +260,7 @@ public class pagInicial extends javax.swing.JFrame {
             f.setEmail(emailcliente);
             f.setCPF(cpfcliente);
             f.setTelefone(celularcliente);
+            f.setTelefone(sobrenomecliente);
 
             
             sql.Inserir_Cliente(f);
