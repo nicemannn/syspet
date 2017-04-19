@@ -41,8 +41,6 @@ public class pagInicial extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         nome = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        sobrenome = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
@@ -57,6 +55,8 @@ public class pagInicial extends javax.swing.JFrame {
         cpf = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
         celular = new javax.swing.JFormattedTextField();
+        jLabel12 = new javax.swing.JLabel();
+        endereco = new javax.swing.JTextField();
 
         jLabel5.setText("jLabel5");
 
@@ -82,15 +82,6 @@ public class pagInicial extends javax.swing.JFrame {
         nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel3.setText("Sobrenome:");
-
-        sobrenome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sobrenomeActionPerformed(evt);
             }
         });
 
@@ -138,6 +129,15 @@ public class pagInicial extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
         jLabel4.setText("Celular:");
 
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel12.setText("Endereço:");
+
+        endereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enderecoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -164,18 +164,18 @@ public class pagInicial extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel13)
                             .addComponent(jLabel9)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cpassword, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(password)
-                            .addComponent(sobrenome, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(nome)
                             .addComponent(email)
-                            .addComponent(cpf)
-                            .addComponent(celular))
+                            .addComponent(cpf, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(celular)
+                            .addComponent(endereco)
+                            .addComponent(nome))
                         .addGap(184, 184, 184))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -190,31 +190,31 @@ public class pagInicial extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(sobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(cpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(93, 93, 93)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(endereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1)
                     .addComponent(jToggleButton2))
@@ -235,34 +235,32 @@ public class pagInicial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sobrenomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sobrenomeActionPerformed
-
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         String nomecliente = nome.getText();
-        String sobrenomecliente = sobrenome.getText();
-        String emailcliente = email.getText();
-        String cpfcliente = cpf.getText();
+        String celularcliente = celular.getText();        
+        String enderecocliente = endereco.getText();        
+        String cpfcliente = cpf.getText();        
         String senhacliente = password.getText();
         String csenhacliente = cpassword.getText();
-        String celularcliente = celular.getText();
+        String emailcliente = email.getText();
+
         /*
         if(nome.equals("") || password.equals("") || cpassword.equals("")){
             JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "sispet", JOptionPane.WARNING_MESSAGE);
         }else{
-          */
+         */ 
             Connection con = Conexao.AbrirConexao();
             secretariaDAO sql = new secretariaDAO(con);
            
             Cliente f = new Cliente();
             
             f.setNome(nomecliente);
-       
-            //f.setEmail(emailcliente);
-            //f.setCPF(cpfcliente);
-            //f.setTelefone(celularcliente);
+            f.setTelefone(celularcliente);
+            f.setEndereco(enderecocliente);
+            f.setCPF(cpfcliente);
+            f.setSenha(senhacliente);            
+            f.setEmail(emailcliente);
 
             
             sql.Inserir_Cliente(f);
@@ -272,9 +270,9 @@ public class pagInicial extends javax.swing.JFrame {
             password.setText("");
             cpassword.setText("");
             
-            JOptionPane.showMessageDialog(null, "Cadastro Realizado ","sispet", JOptionPane.INFORMATION_MESSAGE );
+            JOptionPane.showMessageDialog(null, "Cadastro Realizado ","sispet2", JOptionPane.INFORMATION_MESSAGE );
             dispose();
-       // }
+        //}
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
@@ -288,6 +286,10 @@ public class pagInicial extends javax.swing.JFrame {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void enderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enderecoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,12 +332,13 @@ public class pagInicial extends javax.swing.JFrame {
     private javax.swing.JPasswordField cpassword;
     private javax.swing.JFormattedTextField cpf;
     private javax.swing.JTextField email;
+    private javax.swing.JTextField endereco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -348,6 +351,5 @@ public class pagInicial extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JTextField nome;
     private javax.swing.JPasswordField password;
-    private javax.swing.JTextField sobrenome;
     // End of variables declaration//GEN-END:variables
 }

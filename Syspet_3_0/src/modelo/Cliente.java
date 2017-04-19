@@ -6,6 +6,7 @@
 package modelo;
 
 import javax.swing.JFormattedTextField;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
@@ -19,7 +20,9 @@ public class Cliente {
     private String telefone;
     private int tipoUsuario = 1;
     private String endereco;
-
+    private String senha;
+    
+    
     public String getNome() {
         return nome;
     }
@@ -66,6 +69,14 @@ public class Cliente {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
 }

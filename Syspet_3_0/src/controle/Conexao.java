@@ -17,11 +17,11 @@ public class Conexao {
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1:3333/cad";
+            String url = "jdbc:mysql://127.0.0.1:3333/sispet2";
             con = DriverManager.getConnection(url,"root", "admin");
              
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro na Conexão com o Banco","cad", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog(null, "Erro na Conexão com o Banco","sispet2", JOptionPane.ERROR_MESSAGE );
         }
         return con;
     }

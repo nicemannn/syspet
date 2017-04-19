@@ -21,16 +21,17 @@ public class secretariaDAO extends ExecuteSQL{
     
     
     public String Inserir_Cliente(Cliente f){
-        String sql = "INSERT INTO `cad`.`user` (`nome`) VALUES ('marcos');";
+        String sql = "INSERT INTO cliente VALUES (0,?,?,?,?,?,?)";
        
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
             
             ps.setString(1, f.getNome());
-            ps.setString(2, f.getEmail());
-            ps.setString(3, f.getCPF());
-            ps.setString(4, f.getTelefone());
-            ps.setString(5, f.getEndereco());
+            ps.setString(2, f.getTelefone());
+            ps.setString(3, f.getEndereco());
+            ps.setString(4, f.getCPF());
+            ps.setString(5, f.getSenha());
+            ps.setString(6, f.getEmail());
             
             if(ps.executeUpdate() > 0){
                 return "Cliente Cadastrado com Sucesso!";
