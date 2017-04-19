@@ -21,7 +21,8 @@ public class secretariaDAO extends ExecuteSQL{
     
     
     public String Inserir_Cliente(Cliente f){
-        String sql = "INSERT INTO cliente VALUES (0,?,?,?,?,?)";
+        String sql = "INSERT INTO `cad`.`user` (`nome`) VALUES ('marcos');";
+       
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
             
