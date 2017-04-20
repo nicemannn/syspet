@@ -245,11 +245,11 @@ public class pagInicial extends javax.swing.JFrame {
         String csenhacliente = cpassword.getText();
         String emailcliente = email.getText();
 
-        /*
+        
         if(nome.equals("") || password.equals("") || cpassword.equals("")){
             JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "sispet", JOptionPane.WARNING_MESSAGE);
         }else{
-         */ 
+          
             Connection con = Conexao.AbrirConexao();
             secretariaDAO sql = new secretariaDAO(con);
            
@@ -272,7 +272,7 @@ public class pagInicial extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(null, "Cadastro Realizado ","sispet2", JOptionPane.INFORMATION_MESSAGE );
             dispose();
-        //}
+        }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
