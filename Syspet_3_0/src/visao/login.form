@@ -58,7 +58,14 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="ff" green="ff" red="99" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Usuario">
+              <Font PropertyName="font" name="Tunga" size="12" style="2"/>
+            </TitledBorder>
+          </Border>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -97,8 +104,8 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField1" min="-2" pref="122" max="-2" attributes="0"/>
-                                              <Component id="jPasswordField1" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                              <Component id="txtNome" min="-2" pref="122" max="-2" attributes="0"/>
+                                              <Component id="txtSenha" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -126,14 +133,14 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPasswordField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -198,9 +205,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtNome">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -224,7 +231,7 @@
             <Property name="text" type="java.lang.String" value="ESQUECI MINHA SENHA"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="txtSenha">
         </Component>
       </SubComponents>
     </Container>

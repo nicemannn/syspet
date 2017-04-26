@@ -68,7 +68,8 @@ public class pagInicial extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 0, 0));
         setForeground(new java.awt.Color(204, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Secretaria", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tunga", 2, 12))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N

@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
+import visao.login;
 
 /**
  *
@@ -20,35 +21,36 @@ public class clienteDAO extends ExecuteSQL {
     public clienteDAO(Connection con) {
         super(con);
     }
+
+    Connection conexao = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
     
-    public clienteDAO Consulta_cliente(Cliente email){
-        
-         Cliente f = new Cliente();
-         
+    public void logar(String nome, String senha){
+      String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
         try {
-            
-            String sql = "SELECT email_Cliente, senha_Cliente FROM cliente WHERE email_Cliente =  " + email + "";
-            PreparedStatement ps = getCon().prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-           
-            
-            if(rs != null){
-                while(rs.next()){
-                                      
-                    
-                    f.setNome(rs.getString(2));
-                    
-                    f.setSenha(rs.getString(4));
-                }
+            pst = conexao.prepareStatement(sql);
+            pst.setString(1, nome);
+            pst.setString(2, senha);
+            rs = pst.executeQuery();
+            if(rs.next()){
+            String perfil = rs.getString(6);
+            if(perfil.equals("admin")){
+            login telaLogin = new login();
+            telaLogin.setVisible(true);
+            telaLogin.dispose();
+            }else{
+            login telaLogin = new login();
+            telaLogin.setVisible(true);
+            telaLogin.dispose();
+            JOptionPane.showMessageDialog(null, "Usuário correto");
+            }
+            }else{
+            JOptionPane.showMessageDialog(null, "Usuário inválido");
             }
         } catch (Exception e) {
-            e.getMessage();
+            JOptionPane.showMessageDialog(null, e);
         }
-        if(f.getEmail() == email){
-            JOptionPane.showMessageDialog(null, "FuncionÃ¡rio encontrado com sucesso!");
-        }else{
-        JOptionPane.showMessageDialog(null, "FuncionÃ¡rio NÃ£o encontrado com sucesso!");    
-        }
-        return f;
     }
 }
+

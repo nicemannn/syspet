@@ -62,9 +62,9 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jLabel1.setText("Cadastro Animal");
         jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
 
-        jButton2.setText("Cancelar");
+        jButton2.setText("CANCELAR");
 
-        jButton3.setText("Cadastrar");
+        jButton3.setText("CADASTRAR");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
@@ -151,7 +151,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(353, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel12)
