@@ -27,7 +27,8 @@ public class clienteDAO extends ExecuteSQL {
     ResultSet rs = null;
     
     public void logar(String nome, String senha){
-      String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
+        
+      /*String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
         try {
             pst = conexao.prepareStatement(sql);
             pst.setString(1, nome);
@@ -35,22 +36,25 @@ public class clienteDAO extends ExecuteSQL {
             rs = pst.executeQuery();
             if(rs.next()){
             String perfil = rs.getString(6);
-            if(perfil.equals("admin")){
-            login telaLogin = new login();
-            telaLogin.setVisible(true);
-            telaLogin.dispose();
-            }else{
-            login telaLogin = new login();
-            telaLogin.setVisible(true);
-            telaLogin.dispose();
-            JOptionPane.showMessageDialog(null, "Usuário correto");
-            }
+            //if(perfil.equals("admin")){
+         //  if(){
+               login telaLogin = new login();
+               telaLogin.setVisible(true);
+               telaLogin.dispose();
+               JOptionPane.showMessageDialog(null, "Usuário correto");
+           //}else{
+               //login telaLogin = new login();
+               telaLogin.setVisible(true);
+               telaLogin.dispose();
+           //}
             }else{
             JOptionPane.showMessageDialog(null, "Usuário inválido");
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
-        }
+        }*/
+        JOptionPane.showMessageDialog(null, "Usuário inválido");
+        
     }
 }
 
