@@ -12,7 +12,7 @@ import java.sql.*;
  */
 public class ExecuteSQL {
     
-    private Connection con;
+    protected Connection con;
     
     public ExecuteSQL(Connection con){
         setCon(con);

@@ -9,7 +9,7 @@ package modelo;
  *
  * @author Bad Block
  */
-public class Secretaria {
+public class Secretaria extends User{
     private String nome;
     private String endereço;
     private String CPF;

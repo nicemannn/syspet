@@ -22,39 +22,36 @@ public class clienteDAO extends ExecuteSQL {
         super(con);
     }
 
-    Connection conexao = null;
-    PreparedStatement pst = null;
-    ResultSet rs = null;
+    
     
     public void logar(String nome, String senha){
+        PreparedStatement pst = null;
+        ResultSet rs = null;
         
-      /*String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
+       String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
         try {
-            pst = conexao.prepareStatement(sql);
+            pst = con.prepareStatement(sql);
             pst.setString(1, nome);
             pst.setString(2, senha);
             rs = pst.executeQuery();
             if(rs.next()){
-            String perfil = rs.getString(6);
-            //if(perfil.equals("admin")){
-         //  if(){
+            String perfil = rs.getString(2);
+            if(perfil.equals("admin")){
+               //telaLogin.setVisible(true);
+                //dispose();
+               JOptionPane.showMessageDialog(null, "Seja bem vindo admin");
+           }else{
                login telaLogin = new login();
-               telaLogin.setVisible(true);
+               //telaLogin.setVisible(true);
                telaLogin.dispose();
-               JOptionPane.showMessageDialog(null, "Usuário correto");
-           //}else{
-               //login telaLogin = new login();
-               telaLogin.setVisible(true);
-               telaLogin.dispose();
-           //}
+               JOptionPane.showMessageDialog(null, "Usuário correto, seja bem vindo " + nome);
+           }            
             }else{
             JOptionPane.showMessageDialog(null, "Usuário inválido");
-            }
+            }        
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
-        }*/
-        JOptionPane.showMessageDialog(null, "Usuário inválido");
-        
+        }    
     }
 }
 

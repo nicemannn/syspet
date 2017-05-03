@@ -9,7 +9,7 @@ package modelo;
  *
  * @author Bebe Iucas
  */
-public class Administrador {
+public class Administrador extends User{
     private String senhaExtra;
 
     public String getSenhaExtra() {

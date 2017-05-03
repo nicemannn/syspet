@@ -13,7 +13,7 @@ import javax.swing.JTextField;
  *
  * @author Bebe Iucas
  */
-public class Cliente {
+public class Cliente extends User{
     private String nome;
     private String email;
     private String CPF;
@@ -21,7 +21,6 @@ public class Cliente {
     private int tipoUsuario = 1;
     private String endereco;
     private String senha;
-    
     
     public String getNome() {
         return nome;
