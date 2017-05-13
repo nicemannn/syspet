@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import modelo.Animais;
 import modelo.Cliente;
 import visao.login;
 
@@ -52,6 +53,29 @@ public class clienteDAO extends ExecuteSQL {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }    
+    }
+    public String Inserir_Animal(Animais f){
+        String sql = "INSERT INTO `animal` VALUES (0,?,?,?,?,?,?)";
+       
+        try {
+            PreparedStatement ps = getCon().prepareStatement(sql);
+            
+            ps.setString(1, f.getNome());
+            ps.setString(2, f.getTipo());
+            ps.setString(3, f.getRaca());
+            ps.setDouble(4, f.getPeso());
+            ps.setDouble(5, f.getTamanho());
+            ps.setInt(6, f.getIdade());
+            
+            
+            if(ps.executeUpdate() > 0){
+                return "Animal Cadastrado com Sucesso!";
+            }else{
+                return "Erro ao Cadastrar Animal!";
+            }
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 }
 
