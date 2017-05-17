@@ -55,7 +55,7 @@ public class clienteDAO extends ExecuteSQL {
         }    
     }
     public String Inserir_Animal(Animais f){
-        String sql = "INSERT INTO `animal` VALUES (0,?,?,?,?,?,?)";
+        String sql = "INSERT INTO animais VALUES (0,?,?,?,?,?,?)";
        
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
@@ -63,9 +63,9 @@ public class clienteDAO extends ExecuteSQL {
             ps.setString(1, f.getNome());
             ps.setString(2, f.getTipo());
             ps.setString(3, f.getRaca());
-            ps.setDouble(4, f.getPeso());
-            ps.setDouble(5, f.getTamanho());
-            ps.setInt(6, f.getIdade());
+            ps.setString(4, f.getPeso());
+            ps.setString(5, f.getTamanho());
+            ps.setString(6, f.getIdade());
             
             
             if(ps.executeUpdate() > 0){

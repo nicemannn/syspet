@@ -41,7 +41,6 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        tipo = new javax.swing.JComboBox();
         nome = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         raca = new javax.swing.JTextField();
@@ -54,6 +53,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
         Dono = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         idade = new javax.swing.JTextField();
+        tipo = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -89,14 +89,6 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
         jLabel4.setText("Raça:");
 
-        tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cão", "Gato", "Réptil", "Ave", "Peixe", "Roedor", "" }));
-        tipo.setToolTipText("");
-        tipo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipoActionPerformed(evt);
-            }
-        });
-
         jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
         jLabel5.setText("Nome:");
 
@@ -115,7 +107,8 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jLabel10.setText("Dono:");
         jLabel10.setToolTipText("");
 
-        jLabel11.setText("idade");
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel11.setText("Idade:");
 
         idade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,24 +129,23 @@ public class CadastroAnimal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel10))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel10)
                             .addComponent(jLabel11))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Dono)
                             .addComponent(nome)
-                            .addComponent(tipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(raca, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                             .addComponent(peso)
                             .addComponent(tamanho)
-                            .addComponent(idade))))
+                            .addComponent(idade)
+                            .addComponent(tipo))))
                 .addContainerGap(106, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -218,18 +210,14 @@ public class CadastroAnimal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tipoActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         String nomeanimal = nome.getText();
         String tipoanimal = tipo.getText();        
         String racaanimal = raca.getText();        
-        Double pesoanimal = Double.parseDouble(peso.getText());        
-        Double tamanhoanimal = Double.parseDouble(tamanho.getText());
-        int idadeanimal = Integer.parseInt(idade.getText());
+        String pesoanimal = peso.getText();        
+        String tamanhoanimal = tamanho.getText();
+        String idadeanimal = idade.getText();
         
         
         if(nome.equals("")){
@@ -320,6 +308,6 @@ public class CadastroAnimal extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField peso;
     private javax.swing.JTextField raca;
     private javax.swing.JTextField tamanho;
-    private javax.swing.JComboBox tipo;
+    private javax.swing.JTextField tipo;
     // End of variables declaration//GEN-END:variables
 }

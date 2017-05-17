@@ -14,9 +14,9 @@ public class Animais {
     private String nome;
     private String tipo;
     private String raca;
-    private double peso;
-    private double tamanho;
-    private int idade;
+    private String peso;
+    private String tamanho;
+    private String idade;
 
     public String getNome() {
         return nome;
@@ -42,27 +42,27 @@ public class Animais {
         this.raca = raca;
     }
 
-    public double getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
     }
 
-    public double getTamanho() {
+    public String getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(double tamanho) {
+    public void setTamanho(String tamanho) {
         this.tamanho = tamanho;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
