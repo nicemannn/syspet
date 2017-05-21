@@ -62,9 +62,9 @@ public class login extends javax.swing.JFrame {
         jLabel2.setMinimumSize(new java.awt.Dimension(90, 10));
         jLabel2.setPreferredSize(new java.awt.Dimension(90, 15));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 10, 140, 49);
+        jLabel2.setBounds(200, 40, 140, 49);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
@@ -132,13 +132,13 @@ public class login extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(90, 120, 270, 110);
+        jPanel1.setBounds(130, 150, 270, 110);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/3310144.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/granulation_background_in_grey_by_java_user-d4apgir.jpg"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, -70, 460, 470);
+        jLabel8.setBounds(0, 0, 520, 390);
 
-        setSize(new java.awt.Dimension(415, 310));
+        setSize(new java.awt.Dimension(538, 425));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
