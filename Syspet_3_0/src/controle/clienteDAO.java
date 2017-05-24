@@ -8,6 +8,8 @@ package controle;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.Animais;
 import modelo.Cliente;
@@ -77,5 +79,65 @@ public class clienteDAO extends ExecuteSQL {
             return e.getMessage();
         }
     }
+    
+    public List<Animais> Listar_Animais(){
+        String sql = "SELECT `id_animal`, `tipo_animal`, `raca_animal`, `tamanho_animal`, `peso_animal`, `idade_animal`, `nome_animal` FROM `animais`";
+        List<Animais> lista = new ArrayList<Animais>();
+        
+        try {
+            PreparedStatement ps = getCon().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs != null){
+                while(rs.next()){
+                    Animais f = new Animais();
+                    f.setId(rs.getString(1));
+                    f.setNome(rs.getString(7));
+                    f.setRaca(rs.getString(3));
+                    f.setIdade(rs.getString(6));
+                    
+                    lista.add(f);
+                    
+                }
+            return lista;
+            }else{
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        
+    }
+    
+    /*public Animais Consulta_Animais(int cod){
+        
+        Animais f = new Animais();
+         
+        try {
+            
+            String sql = "SELECT * FROM funcionario WHERE codigo =  " + cod + "";
+            PreparedStatement ps = getCon().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+           
+            
+            if(rs != null){
+                while(rs.next()){
+                                      
+                    f.setCod(rs.getInt(1));
+                    f.setNome(rs.getString(2));
+                    f.setLogin(rs.getString(3));
+                    f.setSenha(rs.getString(4));
+                }
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        if(f.getCod() == cod){
+            JOptionPane.showMessageDialog(null, "Funcionário encontrado com sucesso!");
+        }else{
+        JOptionPane.showMessageDialog(null, "Funcionário Não encontrado com sucesso!");    
+        }
+        return f;
+    }
+*/
 }
-

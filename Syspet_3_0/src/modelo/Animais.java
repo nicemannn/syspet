@@ -11,6 +11,7 @@ package modelo;
  */
 public class Animais {
     
+    private String id;
     private String nome;
     private String tipo;
     private String raca;
@@ -18,6 +19,13 @@ public class Animais {
     private String tamanho;
     private String idade;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }

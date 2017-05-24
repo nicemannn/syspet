@@ -34,19 +34,22 @@ public class home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Meus Animais");
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 150, 130, 70);
+        jButton1.setBounds(20, 120, 110, 30);
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("HOME");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(220, 50, 310, 50);
+        jLabel2.setBounds(230, 20, 120, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/granulation_background_in_grey_by_java_user-d4apgir.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 803, 432);
+        jLabel1.setBounds(0, 0, 800, 300);
 
-        pack();
+        setSize(new java.awt.Dimension(549, 338));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
