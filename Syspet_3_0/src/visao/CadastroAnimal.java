@@ -145,9 +145,11 @@ public class CadastroAnimal extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(110, 20, 195, 38);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/3310144_1.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, -80, 400, 420);
+        jLabel8.setBounds(0, 0, 600, 480);
+
+        setBounds(0, 0, 616, 519);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

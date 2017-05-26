@@ -44,11 +44,11 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(230, 20, 120, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/granulation_background_in_grey_by_java_user-d4apgir.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 800, 300);
+        jLabel1.setBounds(0, 0, 600, 480);
 
-        setSize(new java.awt.Dimension(549, 338));
+        setSize(new java.awt.Dimension(616, 519));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

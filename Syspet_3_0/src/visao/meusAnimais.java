@@ -112,19 +112,19 @@ public class meusAnimais extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabela);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(30, 80, 450, 220);
+        jScrollPane2.setBounds(90, 70, 450, 220);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MEUS ANIMAIS");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 20, 290, 50);
+        jLabel2.setBounds(170, 20, 290, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/granulation_background_in_grey_by_java_user-d4apgir.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 510, 390);
+        jLabel1.setBounds(0, 0, 600, 480);
 
-        setSize(new java.awt.Dimension(527, 430));
+        setSize(new java.awt.Dimension(616, 519));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
