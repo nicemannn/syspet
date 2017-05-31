@@ -17,8 +17,8 @@ public class Conexao {
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1:3333/sispet2";
-            con = DriverManager.getConnection(url,"root", "admin");
+            String url = "jdbc:mysql://127.0.0.1:3306/sispet2";
+            con = DriverManager.getConnection(url,"root", "");
              
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro na Conexão com o Banco","sispet2", JOptionPane.ERROR_MESSAGE );

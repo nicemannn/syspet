@@ -65,13 +65,23 @@ public class login extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("CADASTRAR-SE");
+        jButton2.setText("ENTRAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(170, 270, 109, 23);
+        jButton2.setBounds(170, 270, 73, 23);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ENVIAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(320, 270, 69, 23);
         getContentPane().add(txtSenha);
@@ -96,6 +106,26 @@ public class login extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(616, 519));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        String nome = txtNome.getText();
+        String senha = txtSenha.getText();
+         
+         Connection con = Conexao.AbrirConexao();
+         clienteDAO dao = new clienteDAO(con);
+         
+         dao.logar(nome, senha);
+         
+         if(dao.logar(nome, senha) == true){
+             new home().setVisible(true);
+         }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -10,6 +10,7 @@ import controle.clienteDAO;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Animais;
 
@@ -83,6 +84,11 @@ public class meusAnimais extends javax.swing.JFrame {
         jButton1.setBounds(200, 320, 120, 23);
 
         jButton2.setText("Excluir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(340, 320, 120, 23);
 
@@ -127,6 +133,27 @@ public class meusAnimais extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(616, 519));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String id = JOptionPane.showInputDialog("Qual é o ID do animal que você deseja excluir?");
+        
+        Connection con = Conexao.AbrirConexao();
+        clienteDAO sql = new clienteDAO(con);
+        Animais f = new Animais();
+        
+        int confirma = JOptionPane.showConfirmDialog(null, "Deseja realmente Excluir"
+        + "\n (" + id + ")", "Video Locadora",
+        JOptionPane.YES_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(confirma == 0){
+            f.setId(id);
+            sql.Excluir_Animal(f);
+            Conexao.FecharConexao(con);
+            
+        AtualizaTable();    
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

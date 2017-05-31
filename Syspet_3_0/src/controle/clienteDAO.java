@@ -13,6 +13,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.Animais;
 import modelo.Cliente;
+import visao.home;
 import visao.login;
 
 /**
@@ -27,9 +28,11 @@ public class clienteDAO extends ExecuteSQL {
 
     
     
-    public void logar(String nome, String senha){
+    public boolean logar(String nome, String senha){
         PreparedStatement pst = null;
         ResultSet rs = null;
+        
+        boolean finalResult = false;
         
        String sql = "select * from cliente where email_Cliente=? AND senha_Cliente=?";
         try {
@@ -43,31 +46,35 @@ public class clienteDAO extends ExecuteSQL {
                //telaLogin.setVisible(true);
                 //dispose();
                JOptionPane.showMessageDialog(null, "Seja bem vindo admin");
+               finalResult = true;
            }else{
                login telaLogin = new login();
                //telaLogin.setVisible(true);
                telaLogin.dispose();
                JOptionPane.showMessageDialog(null, "Usuário correto, seja bem vindo " + nome);
+               finalResult = true;
            }            
             }else{
             JOptionPane.showMessageDialog(null, "Usuário inválido");
             }        
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
-        }    
+        } 
+        return finalResult;
     }
+    
     public String Inserir_Animal(Animais f){
         String sql = "INSERT INTO animais VALUES (0,?,?,?,?,?,?)";
        
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
             
-            ps.setString(1, f.getNome());
-            ps.setString(2, f.getTipo());
-            ps.setString(3, f.getRaca());
+            ps.setString(6, f.getNome());
+            ps.setString(1, f.getTipo());
+            ps.setString(2, f.getRaca());
             ps.setString(4, f.getPeso());
-            ps.setString(5, f.getTamanho());
-            ps.setString(6, f.getIdade());
+            ps.setString(3, f.getTamanho());
+            ps.setString(5, f.getIdade());
             
             
             if(ps.executeUpdate() > 0){
@@ -140,4 +147,24 @@ public class clienteDAO extends ExecuteSQL {
         return f;
     }
 */
+    
+    public String Excluir_Animal(Animais f){
+        String sql = "DELETE FROM animais WHERE id_animal = ?";
+    
+        try {
+            PreparedStatement ps = getCon().prepareStatement(sql);
+            ps.setString(1, f.getId());
+            
+            if(ps.executeUpdate() > 0){
+                return "Funcionário Excluído com Sucesso!";
+                
+            }else{
+                return "Erro ao Excluir!";
+            }
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+    
+    }
+    
 }
