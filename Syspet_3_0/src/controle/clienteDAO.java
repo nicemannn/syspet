@@ -116,13 +116,13 @@ public class clienteDAO extends ExecuteSQL {
         
     }
     
-    /*public Animais Consulta_Animais(int cod){
+    public Animais Consulta_Animais(String codigo){
         
         Animais f = new Animais();
          
         try {
             
-            String sql = "SELECT * FROM funcionario WHERE codigo =  " + cod + "";
+            String sql = "SELECT * FROM animais WHERE codigo =  " + codigo + "";
             PreparedStatement ps = getCon().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
            
@@ -130,23 +130,28 @@ public class clienteDAO extends ExecuteSQL {
             if(rs != null){
                 while(rs.next()){
                                       
-                    f.setCod(rs.getInt(1));
+                    f.setId(rs.getString(1));
                     f.setNome(rs.getString(2));
-                    f.setLogin(rs.getString(3));
-                    f.setSenha(rs.getString(4));
+                    f.setTipo(rs.getString(3));
+                    f.setRaca(rs.getString(4));
+                    f.setPeso(rs.getString(5));
+                    f.setTamanho(rs.getString(6));
+                    f.setIdade(rs.getString(7));
+                    
+    
                 }
             }
         } catch (Exception e) {
             e.getMessage();
         }
-        if(f.getCod() == cod){
+        if(f.getId().equals(codigo)){
             JOptionPane.showMessageDialog(null, "Funcionário encontrado com sucesso!");
         }else{
         JOptionPane.showMessageDialog(null, "Funcionário Não encontrado com sucesso!");    
         }
         return f;
     }
-*/
+
     
     public String Excluir_Animal(Animais f){
         String sql = "DELETE FROM animais WHERE id_animal = ?";
@@ -165,6 +170,25 @@ public class clienteDAO extends ExecuteSQL {
             return e.getMessage();
         }
     
+    }
+    public void Alterar_Animais(Animais f){
+        String sql = "UPDATE animais SET nome = ?, login = ?, senha = ?"
+                + "WHERE codigo = ?";
+        try {
+            PreparedStatement ps = getCon().prepareStatement(sql);
+            ps.setString(1, f.getNome());
+            ps.setString(2, f.getLogin());
+            ps.setString(3, f.getSenha());
+            ps.setString(4, "" + f.getCod());
+            
+            if(ps.executeUpdate() > 0){
+                JOptionPane.showMessageDialog(null,"Funcionario Atualizado com Sucesso!");
+            }else{
+                JOptionPane.showMessageDialog(null,"Erro ao Atualizar o Funcionário!");
+            }
+        } catch (Exception e) {
+           e.getMessage();
+        }
     }
     
 }

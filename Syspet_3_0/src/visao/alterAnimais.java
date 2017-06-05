@@ -5,6 +5,12 @@
  */
 package visao;
 
+import controle.Conexao;
+import controle.clienteDAO;
+import java.sql.Connection;
+import javax.swing.JOptionPane;
+import modelo.Animais;
+
 /**
  *
  * @author Lucas Nascimento
@@ -27,10 +33,103 @@ public class alterAnimais extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Dono = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        nome = new javax.swing.JTextField();
+        tipo = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        raca = new javax.swing.JTextField();
+        peso = new javax.swing.JFormattedTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        tamanho = new javax.swing.JTextField();
+        idade = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        cod = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+        getContentPane().add(Dono);
+        Dono.setBounds(190, 70, 88, 20);
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        jLabel10.setText("Dono:");
+        jLabel10.setToolTipText("");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(130, 70, 52, 24);
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel5.setText("Nome:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(130, 100, 53, 24);
+        getContentPane().add(nome);
+        nome.setBounds(190, 110, 88, 20);
+        getContentPane().add(tipo);
+        tipo.setBounds(190, 140, 88, 20);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel3.setText("Tipo:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(140, 130, 44, 24);
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel4.setText("Raça:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(130, 160, 48, 24);
+
+        raca.setColumns(10);
+        raca.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        getContentPane().add(raca);
+        raca.setBounds(190, 170, 88, 20);
+        getContentPane().add(peso);
+        peso.setBounds(190, 200, 88, 20);
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel6.setText("Peso:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(140, 190, 46, 24);
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel7.setText("Tamanho:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(100, 220, 82, 24);
+        getContentPane().add(tamanho);
+        tamanho.setBounds(190, 230, 88, 20);
+
+        idade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idadeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(idade);
+        idade.setBounds(190, 260, 88, 20);
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel11.setText("Idade:");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(130, 260, 53, 24);
+
+        jLabel2.setText("codigo");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(140, 30, 31, 14);
+
+        cod.setText("jTextField1");
+        getContentPane().add(cod);
+        cod.setBounds(190, 30, 90, 20);
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(310, 30, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -38,6 +137,51 @@ public class alterAnimais extends javax.swing.JFrame {
 
         setBounds(0, 0, 616, 519);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void idadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idadeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String codigo = cod.getText();
+        Connection con = Conexao.AbrirConexao();
+        clienteDAO sql = new clienteDAO(con);
+        
+        
+        
+        Animais f = sql.Consulta_Animais(codigo);
+        if( f.getId() != codigo){
+            Conexao.FecharConexao(con);
+        }
+        if(codigo.equals("")){
+            JOptionPane.showMessageDialog(null, "Digite um Código para Atualizar",
+                    "Video Locadora", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        
+        
+        nome.setText("");
+        tipo.setText("");
+        raca.setText("");
+        peso.setText("");
+        tamanho.setText("");
+        idade.setText("");
+        
+        //InserirDados(cod);
+        cod.setText("");
+     
+        
+        nome.setText("" + f.getNome());
+        tipo.setText(f.getTipo());
+        raca.setText(f.getRaca());
+        peso.setText(f.getPeso());
+        tamanho.setText(f.getTamanho());
+        idade.setText(f.getIdade());
+        
+        
+        Conexao.FecharConexao(con);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -75,6 +219,23 @@ public class alterAnimais extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Dono;
+    private javax.swing.JTextField cod;
+    private javax.swing.JTextField idade;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField nome;
+    private javax.swing.JFormattedTextField peso;
+    private javax.swing.JTextField raca;
+    private javax.swing.JTextField tamanho;
+    private javax.swing.JTextField tipo;
     // End of variables declaration//GEN-END:variables
 }
