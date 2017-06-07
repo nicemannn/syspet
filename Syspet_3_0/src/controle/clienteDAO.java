@@ -122,7 +122,7 @@ public class clienteDAO extends ExecuteSQL {
          
         try {
             
-            String sql = "SELECT * FROM animais WHERE codigo =  " + codigo + "";
+            String sql = "SELECT `id_animal`, `tipo_animal`, `raca_animal`, `tamanho_animal`, `peso_animal`, `idade_animal`, `nome_animal` FROM `animais` WHERE id_animal =  " + codigo + "";
             PreparedStatement ps = getCon().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
            
@@ -172,14 +172,19 @@ public class clienteDAO extends ExecuteSQL {
     
     }
     public void Alterar_Animais(Animais f){
-        String sql = "UPDATE animais SET nome = ?, login = ?, senha = ?"
-                + "WHERE codigo = ?";
+        String sql = "UPDATE animais SET tipo_animal = ?, raca_animal = ?, tamanho_animal = ?, peso_animal = ?, idade_animal = ?, nome_animal = ? WHERE id_animal = ?";
+        
+        
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
-            ps.setString(1, f.getNome());
-            ps.setString(2, f.getLogin());
-            ps.setString(3, f.getSenha());
-            ps.setString(4, "" + f.getCod());
+            
+            ps.setString(1, f.getTipo());
+            ps.setString(2, f.getRaca());
+            ps.setString(3, f.getTamanho());
+            ps.setString(4, f.getPeso());
+            ps.setString(5, f.getIdade());
+            ps.setString(6, f.getNome());
+            ps.setString(7, f.getId());
             
             if(ps.executeUpdate() > 0){
                 JOptionPane.showMessageDialog(null,"Funcionario Atualizado com Sucesso!");
@@ -188,6 +193,7 @@ public class clienteDAO extends ExecuteSQL {
             }
         } catch (Exception e) {
            e.getMessage();
+           System.out.println(e.getMessage());
         }
     }
     

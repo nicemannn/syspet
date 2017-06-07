@@ -50,6 +50,7 @@ public class alterAnimais extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         cod = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -131,6 +132,15 @@ public class alterAnimais extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(310, 30, 73, 23);
 
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(200, 300, 73, 23);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 480);
@@ -147,19 +157,13 @@ public class alterAnimais extends javax.swing.JFrame {
         String codigo = cod.getText();
         Connection con = Conexao.AbrirConexao();
         clienteDAO sql = new clienteDAO(con);
-        
-        
-        
-        Animais f = sql.Consulta_Animais(codigo);
-        if( f.getId() != codigo){
-            Conexao.FecharConexao(con);
-        }
+                
         if(codigo.equals("")){
             JOptionPane.showMessageDialog(null, "Digite um Código para Atualizar",
                     "Video Locadora", JOptionPane.WARNING_MESSAGE);
         }
         
-        
+        Animais f = sql.Consulta_Animais(codigo);
         
         nome.setText("");
         tipo.setText("");
@@ -182,6 +186,49 @@ public class alterAnimais extends javax.swing.JFrame {
         
         Conexao.FecharConexao(con);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String codigo = cod.getText();
+        
+        String nomeanimal = nome.getText();
+        String tipoanimal = tipo.getText();        
+        String racaanimal = raca.getText();        
+        String pesoanimal = peso.getText();        
+        String tamanhoanimal = tamanho.getText();
+        String idadeanimal = idade.getText();
+        
+        if(nomeanimal.equals("") || tipoanimal.equals("") || racaanimal.equals("") || pesoanimal.equals("") || pesoanimal.equals("") || idadeanimal.equals("")){
+            JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!",
+                    "Videlo Locadora", JOptionPane.WARNING_MESSAGE);
+        }else{
+            Connection con = Conexao.AbrirConexao();
+            clienteDAO sql = new clienteDAO(con);
+            Animais f = new Animais();
+            
+            f.setId(codigo);
+            f.setNome(nomeanimal);
+            f.setTipo(tipoanimal);
+            f.setRaca(racaanimal);
+            f.setPeso(pesoanimal);
+            f.setTamanho(tamanhoanimal);
+            f.setIdade(idadeanimal);
+            
+            sql.Alterar_Animais(f);
+            Conexao.FecharConexao(con);
+            
+            //cod.setText("");
+            nome.setText("");
+            tipo.setText("");
+            raca.setText("");
+            peso.setText("");
+            tamanho.setText("");
+            idade.setText("");
+        }
+            
+          System.out.println(codigo + nomeanimal + tipoanimal + racaanimal + pesoanimal + tamanhoanimal + idadeanimal);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,6 +270,7 @@ public class alterAnimais extends javax.swing.JFrame {
     private javax.swing.JTextField cod;
     private javax.swing.JTextField idade;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
