@@ -5,9 +5,11 @@
  */
 package controle;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -122,8 +124,9 @@ public class clienteDAO extends ExecuteSQL {
          
         try {
             
-            String sql = "SELECT `id_animal`, `tipo_animal`, `raca_animal`, `tamanho_animal`, `peso_animal`, `idade_animal`, `nome_animal` FROM `animais` WHERE id_animal =  " + codigo + "";
+            String sql = "SELECT `id_animal`, `tipo_animal`, `raca_animal`, `tamanho_animal`, `peso_animal`, `idade_animal`, `nome_animal` FROM `animais` WHERE id_animal =  ?";
             PreparedStatement ps = getCon().prepareStatement(sql);
+            ps.setString(1, codigo);
             ResultSet rs = ps.executeQuery();
            
             
@@ -131,12 +134,12 @@ public class clienteDAO extends ExecuteSQL {
                 while(rs.next()){
                                       
                     f.setId(rs.getString(1));
-                    f.setNome(rs.getString(2));
-                    f.setTipo(rs.getString(3));
-                    f.setRaca(rs.getString(4));
+                    f.setTipo(rs.getString(2));
+                    f.setRaca(rs.getString(3));
+                    f.setTamanho(rs.getString(4));
                     f.setPeso(rs.getString(5));
-                    f.setTamanho(rs.getString(6));
-                    f.setIdade(rs.getString(7));
+                    f.setIdade(rs.getString(6));
+                    f.setNome(rs.getString(7));
                     
     
                 }
@@ -191,7 +194,7 @@ public class clienteDAO extends ExecuteSQL {
             }else{
                 JOptionPane.showMessageDialog(null,"Erro ao Atualizar o Funcionário!");
             }
-        } catch (Exception e) {
+        } catch (SQLException | HeadlessException e) {
            e.getMessage();
            System.out.println(e.getMessage());
         }

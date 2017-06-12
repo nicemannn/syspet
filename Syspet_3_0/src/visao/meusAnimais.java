@@ -80,8 +80,13 @@ public class meusAnimais extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButton1.setText("Alterar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(200, 320, 120, 23);
+        jButton1.setBounds(50, 190, 130, 30);
 
         jButton2.setText("Excluir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -90,11 +95,16 @@ public class meusAnimais extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(340, 320, 120, 23);
+        jButton2.setBounds(50, 240, 130, 30);
 
         jButton3.setText("Cadastrar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
-        jButton3.setBounds(50, 320, 130, 23);
+        jButton3.setBounds(50, 140, 130, 30);
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -118,19 +128,19 @@ public class meusAnimais extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabela);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(90, 70, 450, 220);
+        jScrollPane2.setBounds(220, 120, 330, 220);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
         jLabel2.setText("MEUS ANIMAIS");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 20, 290, 50);
+        jLabel2.setBounds(160, 30, 290, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 480);
+        jLabel1.setBounds(0, 0, 590, 480);
 
-        setSize(new java.awt.Dimension(616, 519));
+        setSize(new java.awt.Dimension(609, 516));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -154,6 +164,16 @@ public class meusAnimais extends javax.swing.JFrame {
         AtualizaTable();    
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new CadastroAnimal().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new alterAnimais().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

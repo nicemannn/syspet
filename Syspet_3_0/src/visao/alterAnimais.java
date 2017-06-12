@@ -33,74 +33,42 @@ public class alterAnimais extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Dono = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         nome = new javax.swing.JTextField();
         tipo = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         raca = new javax.swing.JTextField();
         peso = new javax.swing.JFormattedTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         tamanho = new javax.swing.JTextField();
         idade = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         cod = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-        getContentPane().add(Dono);
-        Dono.setBounds(190, 70, 88, 20);
-
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
-        jLabel10.setText("Dono:");
-        jLabel10.setToolTipText("");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(130, 70, 52, 24);
-
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel5.setText("Nome:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(130, 100, 53, 24);
         getContentPane().add(nome);
-        nome.setBounds(190, 110, 88, 20);
+        nome.setBounds(270, 140, 88, 30);
         getContentPane().add(tipo);
-        tipo.setBounds(190, 140, 88, 20);
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel3.setText("Tipo:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(140, 130, 44, 24);
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel4.setText("Raça:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(130, 160, 48, 24);
+        tipo.setBounds(270, 180, 88, 30);
 
         raca.setColumns(10);
         raca.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         getContentPane().add(raca);
-        raca.setBounds(190, 170, 88, 20);
+        raca.setBounds(270, 220, 88, 30);
         getContentPane().add(peso);
-        peso.setBounds(190, 200, 88, 20);
-
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel6.setText("Peso:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(140, 190, 46, 24);
-
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel7.setText("Tamanho:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 220, 82, 24);
+        peso.setBounds(270, 260, 88, 30);
         getContentPane().add(tamanho);
-        tamanho.setBounds(190, 230, 88, 20);
+        tamanho.setBounds(270, 300, 88, 30);
 
         idade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,42 +76,99 @@ public class alterAnimais extends javax.swing.JFrame {
             }
         });
         getContentPane().add(idade);
-        idade.setBounds(190, 260, 88, 20);
-
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel11.setText("Idade:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(130, 260, 53, 24);
-
-        jLabel2.setText("codigo");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 30, 31, 14);
-
-        cod.setText("jTextField1");
+        idade.setBounds(270, 340, 88, 30);
         getContentPane().add(cod);
-        cod.setBounds(190, 30, 90, 20);
+        cod.setBounds(270, 100, 90, 30);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Pesquisar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(310, 30, 73, 23);
+        jButton1.setBounds(380, 100, 90, 30);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(200, 300, 73, 23);
+        jButton2.setBounds(180, 380, 90, 30);
+
+        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel15.setText("Idade:");
+        jLabel15.setToolTipText("");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(210, 333, 70, 30);
+
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel14.setText("Tamanho:");
+        jLabel14.setToolTipText("");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(180, 300, 90, 23);
+
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel13.setText("Peso:");
+        jLabel13.setToolTipText("");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(220, 260, 50, 23);
+
+        jLabel8.setBackground(new java.awt.Color(0, 204, 102));
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel8.setText("ALTERAR ANIMAIS");
+        jLabel8.setAlignmentX(0.5F);
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(120, 0, 350, 53);
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel9.setText("Código:");
+        jLabel9.setToolTipText("");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(200, 100, 70, 23);
+
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel12.setText("Raça:");
+        jLabel12.setToolTipText("");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(220, 220, 50, 23);
+
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel10.setText("Tipo:");
+        jLabel10.setToolTipText("");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(220, 180, 50, 23);
+
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel2.setText("Nome:");
+        jLabel2.setToolTipText("");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(210, 140, 60, 23);
+
+        jButton3.setText("CANCELAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(290, 380, 90, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 480);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(90, 10, 380, 370);
 
         setBounds(0, 0, 616, 519);
     }// </editor-fold>//GEN-END:initComponents
@@ -173,7 +198,6 @@ public class alterAnimais extends javax.swing.JFrame {
         idade.setText("");
         
         //InserirDados(cod);
-        cod.setText("");
      
         
         nome.setText("" + f.getNome());
@@ -230,6 +254,11 @@ public class alterAnimais extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -266,20 +295,21 @@ public class alterAnimais extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Dono;
     private javax.swing.JTextField cod;
     private javax.swing.JTextField idade;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nome;
     private javax.swing.JFormattedTextField peso;
     private javax.swing.JTextField raca;

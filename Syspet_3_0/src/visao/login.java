@@ -41,6 +41,7 @@ public class login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         jLabel5.setText("jLabel5");
@@ -52,7 +53,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
         jLabel2.setText("LOGIN");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jLabel2.setAlignmentX(0.5F);
@@ -61,10 +62,9 @@ public class login extends javax.swing.JFrame {
         jLabel2.setMinimumSize(new java.awt.Dimension(90, 10));
         jLabel2.setPreferredSize(new java.awt.Dimension(90, 15));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(230, 70, 140, 49);
+        jLabel2.setBounds(230, 40, 140, 49);
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("ENTRAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,10 +72,9 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(170, 270, 73, 23);
+        jButton2.setBounds(183, 263, 90, 30);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ENVIAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,21 +82,27 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 270, 69, 23);
+        jButton1.setBounds(299, 263, 90, 30);
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(270, 210, 120, 20);
+        txtSenha.setBounds(270, 210, 120, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tunga", 3, 14)); // NOI18N
-        jLabel3.setText("USERNAME:");
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel3.setText("EMAIL:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(180, 170, 66, 25);
+        jLabel3.setBounds(210, 155, 60, 40);
         getContentPane().add(txtNome);
-        txtNome.setBounds(270, 170, 120, 20);
+        txtNome.setBounds(270, 160, 120, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tunga", 3, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 0));
         jLabel4.setText("SENHA:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(180, 210, 41, 25);
+        jLabel4.setBounds(210, 210, 70, 30);
+
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(140, 130, 300, 190);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -125,6 +130,7 @@ public class login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        new pagInicial().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -170,6 +176,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField txtNome;

@@ -67,18 +67,20 @@ public class pagInicial extends javax.swing.JFrame {
         setForeground(new java.awt.Color(204, 0, 0));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("SIGN UP");
+        jLabel1.setBackground(new java.awt.Color(0, 204, 102));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel1.setText("CADASTRAR");
         jLabel1.setAlignmentX(0.5F);
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(270, 30, 102, 38);
+        jLabel1.setBounds(190, 30, 220, 53);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 0));
         jLabel2.setText("Nome:");
         jLabel2.setToolTipText("");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(210, 90, 53, 24);
+        jLabel2.setBounds(200, 110, 50, 23);
 
         nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,25 +88,31 @@ public class pagInicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(nome);
-        nome.setBounds(270, 100, 130, 20);
+        nome.setBounds(260, 110, 130, 30);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 204, 0));
         jLabel6.setText("Senha:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(210, 190, 56, 24);
+        jLabel6.setBounds(200, 230, 53, 23);
 
-        jToggleButton1.setText("ENVIAR DADOS");
+        jToggleButton1.setText("ENVIAR ");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jToggleButton1);
-        jToggleButton1.setBounds(270, 350, 107, 23);
+        jToggleButton1.setBounds(170, 410, 120, 30);
 
         jToggleButton2.setText("CANCELAR");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jToggleButton2);
-        jToggleButton2.setBounds(390, 350, 85, 23);
+        jToggleButton2.setBounds(300, 410, 120, 30);
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,51 +120,58 @@ public class pagInicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(password);
-        password.setBounds(270, 200, 130, 20);
+        password.setBounds(260, 230, 130, 30);
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
-        jLabel8.setText("Confirmação de senha:");
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel8.setText("Confirmar senha:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(70, 220, 189, 32);
+        jLabel8.setBounds(120, 270, 144, 32);
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 204, 0));
         jLabel9.setText("Email:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(210, 130, 55, 24);
+        jLabel9.setBounds(210, 150, 45, 23);
         getContentPane().add(email);
-        email.setBounds(270, 130, 130, 20);
+        email.setBounds(260, 150, 130, 30);
         getContentPane().add(cpassword);
-        cpassword.setBounds(270, 230, 130, 20);
+        cpassword.setBounds(260, 270, 130, 30);
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 204, 0));
         jLabel13.setText("CPF:");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(220, 160, 44, 24);
+        jLabel13.setBounds(210, 190, 35, 23);
 
         try {
             cpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        cpf.setText("     .       .       -  ");
+        cpf.setToolTipText("");
         cpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfActionPerformed(evt);
             }
         });
         getContentPane().add(cpf);
-        cpf.setBounds(270, 170, 130, 20);
+        cpf.setBounds(260, 190, 130, 30);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 0));
         jLabel4.setText("Celular:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(190, 260, 69, 24);
+        jLabel4.setBounds(190, 310, 61, 23);
         getContentPane().add(celular);
-        celular.setBounds(270, 270, 130, 20);
+        celular.setBounds(260, 310, 130, 30);
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 204, 0));
         jLabel12.setText("Endereço:");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(180, 290, 84, 24);
+        jLabel12.setBounds(170, 350, 78, 23);
 
         endereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,13 +179,13 @@ public class pagInicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(endereco);
-        endereco.setBounds(270, 300, 130, 20);
+        endereco.setBounds(260, 350, 130, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 600, 480);
+        jLabel3.setBounds(0, 0, 580, 480);
 
-        setBounds(0, 0, 616, 519);
+        setBounds(0, 0, 597, 519);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -228,6 +243,11 @@ public class pagInicial extends javax.swing.JFrame {
     private void enderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enderecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_enderecoActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments
