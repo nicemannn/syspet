@@ -86,7 +86,7 @@ public class meusAnimais extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(50, 190, 130, 30);
+        jButton1.setBounds(50, 210, 130, 30);
 
         jButton2.setText("Excluir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +95,7 @@ public class meusAnimais extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(50, 240, 130, 30);
+        jButton2.setBounds(50, 280, 130, 30);
 
         jButton3.setText("Cadastrar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -108,17 +108,17 @@ public class meusAnimais extends javax.swing.JFrame {
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID", "Nome", "Raça", "Idade", "Dono"
+                "ID", "Nome", "Raça", "Idade"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -138,9 +138,9 @@ public class meusAnimais extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 590, 480);
+        jLabel1.setBounds(0, 0, 600, 480);
 
-        setSize(new java.awt.Dimension(609, 516));
+        setSize(new java.awt.Dimension(616, 519));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

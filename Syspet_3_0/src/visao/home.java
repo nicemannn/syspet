@@ -63,13 +63,13 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(230, 20, 120, 50);
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Produtos");
         getContentPane().add(jButton3);
-        jButton3.setBounds(230, 230, 110, 30);
+        jButton3.setBounds(230, 310, 110, 30);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Meus Serviços");
         getContentPane().add(jButton2);
-        jButton2.setBounds(230, 170, 110, 30);
+        jButton2.setBounds(230, 210, 110, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel1);

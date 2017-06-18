@@ -65,7 +65,7 @@ public class login extends javax.swing.JFrame {
         jLabel2.setBounds(230, 40, 140, 49);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("ENTRAR");
+        jButton2.setText("Entrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -75,7 +75,7 @@ public class login extends javax.swing.JFrame {
         jButton2.setBounds(183, 263, 90, 30);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ENVIAR");
+        jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

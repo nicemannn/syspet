@@ -155,7 +155,7 @@ public class alterAnimais extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 140, 60, 23);
 
-        jButton3.setText("CANCELAR");
+        jButton3.setText("Cancelar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

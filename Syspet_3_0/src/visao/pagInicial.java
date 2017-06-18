@@ -96,7 +96,7 @@ public class pagInicial extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(200, 230, 53, 23);
 
-        jToggleButton1.setText("ENVIAR ");
+        jToggleButton1.setText("Cadastrar");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -105,7 +105,8 @@ public class pagInicial extends javax.swing.JFrame {
         getContentPane().add(jToggleButton1);
         jToggleButton1.setBounds(170, 410, 120, 30);
 
-        jToggleButton2.setText("CANCELAR");
+        jToggleButton2.setSelected(true);
+        jToggleButton2.setText("Cancelar");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton2ActionPerformed(evt);
@@ -183,9 +184,9 @@ public class pagInicial extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background1.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 580, 480);
+        jLabel3.setBounds(0, 0, 600, 480);
 
-        setBounds(0, 0, 597, 519);
+        setBounds(0, 0, 616, 519);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
